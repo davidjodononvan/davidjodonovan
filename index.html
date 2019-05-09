@@ -47,13 +47,9 @@
             destination: destination, 
             details: details
         };
-        analytics.identify('1234', {
-            company: { 
-                name: 'Some Company' 
-            }, 
-            email: email, 
-            name: fullname
-        });
+
+<!--Placeholder for Segment EVENT --> 
+
         analytics.track('destination submitted', user, function() {
             window.location.href = "";
         });
