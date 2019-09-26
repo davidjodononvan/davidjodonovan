@@ -62,5 +62,28 @@
 </script>
      <!--Placeholder for identify and track script -->
     
+    
+          <iframe id="video-player" type="text/html" width="560" height="315" src="http://www.youtube.com/embed/vpqvPtC721c?enablejsapi=1&origin=http://consulting-v2.fcl.me" frameborder="0"></iframe>
+      <!-- <div id="video-player"></div> -->
+      
+      <script>
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      
+        var player;
+        function onYouTubeIframeAPIReady() {
+          player = new YT.Player('video-player', {
+          // height: '390',
+          // width: '640',
+          // videoId: 'vpqvPtC721c'
+          });
+          var ytAnalytics = new window.analyticsPlugins.YT(player, 'K1aWS6RuaDYHCH408LqZvh2iXJTECUt9')
+          ytAnalytics.initialize()
+        }
+      
+      </script>
+    
 </body> 
 </html>
