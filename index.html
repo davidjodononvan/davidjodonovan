@@ -58,6 +58,16 @@
         analytics.track('destination submitted', user, function() {
             window.location.href = "";
         });
+          
+          analytics.track('Order Completed', {
+            order_id: 'nrhl4k277xq',
+            products: [
+                {
+                 name: 'gorgias'
+                }
+             ],
+                revenue: 21.15
+            });
       }
 </script>
      <!--Placeholder for identify and track script -->
