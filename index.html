@@ -72,6 +72,48 @@
           analytics.track("Testing Track IP Setting", {}, {context:{ip:"1.1.1.1"}});
       }
 </script>
+    
+    
+    
+    
+<!-- Visual Tagger Form -->
+    <form name="travel visual tagger" onsubmit="identify(event)">
+     What is your favorite travel destination? - Visual Tagger
+    <input name="destinationTagger" required="" size="81" type="text"/> 
+    <br><br><br> 
+    Any recommendations (cool things to do, places to visit or restaurants to eat)? 
+    <br><br> 
+    <textarea cols="81" name="detailsTagger" required="" rows="10">
+    </textarea> 
+    <br><br> 
+    Name: <input name="fullnameTagger" required="" size="75" type="text"/> 
+    <br><br> 
+    Email: <input name="emailTagger" required="" size="75" type="email"/> 
+    <br><br>
+    <input name="submitTagger" type="submit" value="submit"/>
+</form> 
+    <!--Placeholder for identify and track script -->
+    <script type="text/javascript">
+      function identify(e){
+        e.preventDefault();
+        var formTagger = e.target;
+        var emailTagger = form["emailTagger"].value;
+        var fullnameTagger = form["fullnameTagger"].value;
+        var destinationTagger = form["destinationTagger"].value;
+        var detailsTagger = form["detailsTagger"].value;
+        var userTagger = {
+            emailTagger: emailTagger, 
+            nameTagger: fullnameTagger, 
+            destinationTagger: destinationTagger, 
+            detailsTagger: detailsTagger
+        };
+
+<!-- Placeholder for Segment EVENT --> 
+      }
+</script>
+    
+    
+    
      <!--Placeholder for identify and track script -->
     
     <a href="https://davidjodononvan.github.io/davidjodonovan/index2.html">Link to second instance of Javascript</a>
