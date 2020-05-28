@@ -35,6 +35,8 @@
     <br><br> 
     Email: <input name="email" required="" size="75" type="email"/> 
     <br><br>
+    formid: <input name="formid" required="" size="75" type="number"/> 
+    <br><br>
     <input name="submit" type="submit" value="submit"/>
 </form> 
     <!--Placeholder for identify and track script -->
@@ -45,6 +47,7 @@
         var email = form["email"].value;
         var fullname = form["fullname"].value;
         var destination = form["destination"].value;
+        var formid = form["foormid"].value;
         var details = form["details"].value;
         var user = {
             email: email, 
