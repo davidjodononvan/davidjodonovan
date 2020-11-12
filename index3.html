@@ -1,0 +1,336 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Home Questionnaire<span id="selection-marker-1" class="redactor-selection-marker"></span></title> 
+
+    <!--Placeholder for Segment Snippet --> 
+<!--
+  <script>
+  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+  //analytics.load("K1aWS6RuaDYHCH408LqZvh2iXJTECUt9");
+  analytics.page();
+  }}();
+</script>
+-->
+     <!--Placeholder for Segment Snippet -->
+
+<!-- Testing Consent Manager -->
+<div id="target-container"></div>
+    
+<!-- Facebook Pixel Code -->
+
+<!-- End Facebook Pixel Code -->
+    
+    
+</head> 
+<body> 
+
+<!-- Consent Manager Script -->
+        <script>
+
+window.consentManagerConfig = function(exports) {
+   //creating our custome category object
+   var customCategories = {
+          'Analytics': {
+             integrations: ['Google Analytics','Mixpanel','Amplitude'], 
+             purpose: 'Provide statistical information on site usage, e.g., web analytics so we can improve this website over time.'          
+          },
+          'Functional': {
+            integrations: ['Salesforce Marketing Cloud','Visual Tagger'], 
+            purpose: 'Enables enhanced functionality, such as videos and live chat. If you do not allow these, then some or all of these functions may not work properly.'    
+          },
+          'Do Not Sell': {
+             integrations: ['Salesforce', 'MailChimp', 'AdWords'], 
+             purpose:'To give the right to opt out of the sale of personal data.'
+          }
+      }; 
+  
+   
+  //this will set which category of tools are opted in/out of by default
+    var initialPrefs = {
+        'Functional': true,
+        'Analytics': false,
+        'Do Not Sell': false }; 
+  
+         var prefs = {
+          
+          container: '#target-container', 
+          //passing in our customCategories object to consentManagerConfig
+          customCategories: customCategories,
+          //passing in our initial preferences object to consentManagerConfig
+          initialPreferences: initialPrefs, 
+          writeKey: 'K1aWS6RuaDYHCH408LqZvh2iXJTECUt9',
+          bannerContent: 'User consent is awesome! We use cookies (and other similar technologies) to collect data to improve your experience on our site.',
+          bannerSubContent: 'You can change your preferences at any time.',
+          cancelDialogContent: 'Your preferences have not been saved. By continuing to use our website, you are agreeing to our Website Data Collection Policy',
+          cancelDialogTitle: 'Are you sure you want to cancel?',
+          closeBehavior: 'accept',
+          implyConsentOnInteraction: false,
+          preferencesDialogContent: 'We use data collected by cookies and JavaScript libraries, which are necessary for website functioning, to improve user’s browsing experience, analyze site traffic, deliver personalized advertisements, and increase the overall performance of our site.',
+          preferencesDialogTitle: 'Website Data Collection Preferences'
+          
+      }        
+        return prefs; 
+} 
+
+</script>
+<!--script that loads Prebuilt Consent Manager UI via Preact, note using version 5.0.0-->
+ <script src="https://unpkg.com/@segment/consent-manager@5.0.0/standalone/consent-manager.js" defer> </script>
+
+
+<!--Load Analytics.js-->
+<script>
+        !(function() {
+          var analytics = (window.analytics = window.analytics || [])
+          if (!analytics.initialize)
+            if (analytics.invoked)
+              window.console && console.error && console.error('Segment snippet included twice.')
+            else {
+              analytics.invoked = !0
+              analytics.methods = [
+                'trackSubmit',
+                'trackClick',
+                'trackLink',
+                'trackForm',
+                'pageview',
+                'identify',
+                'reset',
+                'group',
+                'track',
+                'ready',
+                'alias',
+                'debug',
+                'page',
+                'once',
+                'off',
+                'on', 
+                //methods below needed for consent manager version 5.0.0 and greater!!
+                'addSourceMiddleware', 
+                'addDestinationMiddleware'
+              ]
+              analytics.factory = function(t) {
+                return function() {
+                  var e = Array.prototype.slice.call(arguments)
+                  e.unshift(t)
+                  analytics.push(e)
+                  return analytics
+                }
+              }
+              for (var t = 0; t < analytics.methods.length; t++) {
+                var e = analytics.methods[t]
+                analytics[e] = analytics.factory(e)
+              }
+              analytics.load = function(t, e) {
+                var n = document.createElement('script')
+                n.type = 'text/javascript'
+                n.async = !0
+                n.src =
+                  ('https:' === document.location.protocol ? 'https://' : 'http://') +
+                  'cdn.segment.com/analytics.js/v1/' +
+                  t +
+                  '/analytics.min.js'
+                var o = document.getElementsByTagName('script')[0]
+                o.parentNode.insertBefore(n, o)
+                analytics._loadOptions = e
+              }
+              analytics.SNIPPET_VERSION = '4.1.0'
+              analytics.page()
+            }
+        })()
+      </script>
+
+<h1>What is your favorite place to travel?</h1> 
+<p>I am building a directory of the sweetest travel destinations.</p>  
+<form name="travel" onsubmit="identify(event)">
+     What is your favorite travel destination?
+    <input name="destination" required="" size="81" type="text"/> 
+    <br><br><br> 
+    Any recommendations (cool things to do, places to visit or restaurants to eat)? 
+    <br><br> 
+    <textarea cols="81" name="details" required="" rows="10">
+    </textarea> 
+    <br><br> 
+    Name: <input name="fullname" required="" size="75" type="text"/> 
+    <br><br> 
+    Email: <input name="email" required="" size="75" type="email"/> 
+    <br><br>
+    formid: <input name="formid" required="" size="75" type="number"/> 
+    <br><br>
+    <input name="submit" type="submit" value="submit"/>
+</form> 
+    <!--Placeholder for identify and track script -->
+    <script type="text/javascript">
+      function identify(e){
+        e.preventDefault();
+        var form = e.target;
+        var email = form["email"].value;
+        var fullname = form["fullname"].value;
+        var destination = form["destination"].value;
+        var formid = form["foormid"].value;
+        var details = form["details"].value;
+        var user = {
+            email: email, 
+            name: fullname, 
+            destination: destination, 
+            details: details
+        };
+
+<!--Placeholder for Segment EVENT --> 
+
+        analytics.track('destination submitted', user, function() {
+            window.location.href = "";
+        });
+          
+          analytics.track('Order Completed', {
+            order_id: '7777777777',
+            products: [
+                {
+                 name: 'gorgias'
+                }
+             ],
+                revenue: 21.15
+            });
+          
+          analytics.track("Testing Track IP Setting", {}, {context:{ip:"1.1.1.1"}});
+      }
+</script>
+    
+    
+    
+    
+<!-- Visual Tagger Form -->
+    <form name="travel visual tagger" onsubmit="identify(event)">
+     What is your favorite travel destination? - Visual Tagger
+    <input name="destinationTagger" required="" size="81" type="text"/> 
+    <br><br><br> 
+    Any recommendations (cool things to do, places to visit or restaurants to eat)? 
+    <br><br> 
+    <textarea cols="81" name="detailsTagger" required="" rows="10">
+    </textarea> 
+    <br><br> 
+    Name: <input name="fullnameTagger" required="" size="75" type="text"/> 
+    <br><br> 
+    Email: <input name="emailTagger" required="" size="75" type="email"/> 
+    <br><br>
+    <input name="submitTagger" type="submit" value="submit"/>
+</form> 
+    <!--Placeholder for identify and track script -->
+    <script type="text/javascript">
+      function identify(e){
+        e.preventDefault();
+        var formTagger = e.target;
+        var emailTagger = form["emailTagger"].value;
+        var fullnameTagger = form["fullnameTagger"].value;
+        var destinationTagger = form["destinationTagger"].value;
+        var detailsTagger = form["detailsTagger"].value;
+        var userTagger = {
+            emailTagger: emailTagger, 
+            nameTagger: fullnameTagger, 
+            destinationTagger: destinationTagger, 
+            detailsTagger: detailsTagger
+        };
+
+<!-- Placeholder for Segment EVENT --> 
+      }
+</script>
+    
+    
+    
+     <!--Placeholder for identify and track script -->
+    
+    <a href="https://davidjodononvan.github.io/davidjodonovan/index2.html">Link to second instance of Javascript</a>
+    <br>
+    <br>
+    <br>
+  
+
+      <!-- <div id="video-player"></div> -->
+
+    
+    <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+    <div id="player"></div>
+
+    <script>
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '390',
+          width: '640',
+          videoId: 'izoct69J4v8',
+events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+        var ytAnalytics = new window.analytics.plugins.YouTubeAnalytics(player,'AIzaSyAbfWme2WEH30uEwPW0hO2IFb4_VlwNoO0')
+    ytAnalytics.initialize()
+      }
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
+      // 5. The API calls this function when the player's state changes.
+      //    The function indicates that when playing a video (state=1),
+      //    the player should play for six seconds and then stop.
+      var done = false;
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+          setTimeout(stopVideo, 6000);
+          done = true;
+        }
+      }
+      function stopVideo() {
+        player.stopVideo();
+      }
+    </script>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!-- Visual Taggar Test -->
+    Visual Taggar Testing
+    <footer>
+    <div class="footer-content">
+        <ul>
+        <li><a class="footer-content-item" href="/amenities">AMENITIES</a></li>
+
+        <li><a class="footer-content-item" href="/floorplan">FLOORPLANS</a></li>
+  
+       <li><a class="footer-content-item" href="/neighborhood">NEIGHBORHOOD</a></li>
+   
+        <li><a class="footer-content-item" href="/scheduletour">SCHEDULE A TOUR</a></li>
+    
+        <li><a class="footer-content-item" href="/contact">CONTACT</a></li>
+        <ul>
+    </div>
+    </footer>
+ 
+   <!--
+   <script
+     src="https://unpkg.com/@segment/consent-manager@1.2.0/standalone/consent-manager.js"
+     data-container="#target-container"
+     data-writeKey="K1aWS6RuaDYHCH408LqZvh2iXJTECUt9"
+     data-bannerContent="We use cookies (and other similar technologies) to collect data to improve your experience on our site."
+     data-bannerSubContent="You can change your preferences at any time."
+     data-preferencesDialogTitle="Website Data Collection Preferences"
+     data-preferencesDialogContent="We use data collected by cookies and JavaScript libraries to improve your browsing experience, analyze site traffic, deliver personalized advertisements, and increase the overall performance of our site."
+     data-cancelDialogTitle="Are you sure you want to cancel?"
+     data-cancelDialogContent="Your preferences have not been saved. By continuing to use our website, you՚re agreeing to our Website Data Collection Policy."
+   ></script>        
+-->
+        
+
+
+
+       
+</body> 
+</html>
